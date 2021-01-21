@@ -10,7 +10,6 @@ import {TransformInterceptor} from './interceptors/transform.interceptor';
 import {DingdingModule} from './modules/dingding/dingding.module';
 import {ErrorFilter} from './common/filter/error.filter';
 import {TaskModule} from './modules/task/task.module';
-// import {GithubModule} from './modules/github/github.module';
 
 function switchConfig(): any[] {
     switch (process.env.NODE_ENV) {
