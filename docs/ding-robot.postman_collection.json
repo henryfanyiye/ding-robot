@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "5b2d7ce4-f2ff-47d0-afb6-2b96c8c8ef63",
+		"name": "ding-robot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/dingding/sendMsg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"msgtype\": \"text\",\n    \"text\": {\n        \"content\": \"统计\"\n    },\n    \"msgId\": \"XXXX\",\n    \"createAt\": 1487561654123,\n    \"conversationType\": \"2\",\n    \"conversationId\": \"XXXX\",\n    \"conversationTitle\": \"钉钉群标题\",\n    \"senderId\": \"XXXX\",\n    \"senderNick\": \"星星\",\n    \"senderCorpId\": \"XXXX\",\n    \"senderStaffId\": \"XXXX\",\n    \"chatbotUserId\": \"XXXX\",\n    \"atUsers\": [\n        {\n            \"dingtalkId\": \"XXXX\",\n            \"staffId\": \"XXXX\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dingding/sendMsg",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dingding",
+						"sendMsg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/task/sync",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/task/sync?start=2020-12-01&end=2021-01-01",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"task",
+						"sync"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-12-01"
+						},
+						{
+							"key": "end",
+							"value": "2021-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/scm/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/scm/list?sort=created&direction=desc&page=2&per_page=90&since=2020-10-01T00:00:00Z&state=all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"scm",
+						"list"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "created"
+						},
+						{
+							"key": "direction",
+							"value": "desc"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "per_page",
+							"value": "90"
+						},
+						{
+							"key": "since",
+							"value": "2020-10-01T00:00:00Z"
+						},
+						{
+							"key": "state",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

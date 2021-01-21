@@ -1,0 +1,10 @@
+apps:
+  - script: 'src/main.ts'
+    name: 'ding-robot'
+    instances: '1'
+    exec_mode: 'cluster'
+    watch: 'false'
+    error_file: '/dev/null'
+    out_file: '/dev/null'
+    env:
+      NODE_ENV: 'prod'
